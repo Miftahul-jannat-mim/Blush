@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Account — The Blush Makeover</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="dash-nav">
+  <span class="logo"><span class="mark"></span>The Blush Makeover</span>
+  <div class="nav-right">
+    <a class="ghost" href="index.html">Homepage</a>
+    <a class="ghost" href="admin.html">Admin ↗</a>
+    <button id="sign-out" class="ghost" type="button">Sign out</button>
+  </div>
+</nav>
+
+<div class="banner"></div>
+
+<main class="dash-main">
+  <div class="profile-card">
+    <div class="avatar" id="profile-avatar"></div>
+    <div class="profile-info">
+      <div class="profile-name-row">
+        <h1 id="profile-username">—</h1>
+        <span class="badge">Active</span>
+      </div>
+      <p class="profile-meta" id="profile-meta">—</p>
+    </div>
+  </div>
+
+  <div class="dash-tabs">
+    <button class="dash-tab active" data-tab="bookings" type="button">My bookings</button>
+    <button class="dash-tab" data-tab="activity" type="button">Activity</button>
+    <button class="dash-tab" data-tab="settings" type="button">Settings</button>
+  </div>
+
+  <section class="dash-panel" id="panel-bookings">
+    <div class="panel">
+      <h3>Book an appointment</h3>
+      <p class="panel-sub">Pick a service and a date. We'll confirm by phone.</p>
+      <form id="booking-form" class="booking-form" novalidate>
+        <label for="booking-service">Service</label>
+        <select id="booking-service" required>
+          <option value="" disabled selected>Choose a service</option>
+          <option value="Bridal Makeup — Wedding Day (৳15,000)">Bridal Makeup — Wedding Day (৳15,000)</option>
+          <option value="Bridal Trial Makeup (৳5,000)">Bridal Trial Makeup (৳5,000)</option>
+          <option value="Engagement / Reception (৳8,000)">Engagement / Reception (৳8,000)</option>
+          <option value="Party Makeup (৳4,000)">Party Makeup (৳4,000)</option>
+          <option value="Mehendi / Haldi Look (৳3,500)">Mehendi / Haldi Look (৳3,500)</option>
+          <option value="Saree Draping add-on (৳2,000)">Saree Draping add-on (৳2,000)</option>
+        </select>
+
+        <label for="booking-date">Date</label>
+        <input id="booking-date" type="date" required />
+
+        <label for="booking-notes">Notes (optional)</label>
+        <textarea id="booking-notes" placeholder="Venue, outfit colour, anything we should know"></textarea>
+
+        <button type="submit" class="primary">Request booking</button>
+      </form>
+    </div>
+
+    <div class="panel">
+      <h3>Your bookings</h3>
+      <p class="panel-sub">Requests you've made, most recent first.</p>
+      <ul id="booking-list" class="booking-list"></ul>
+      <p id="booking-empty" class="empty" hidden>No bookings yet — request one above.</p>
+    </div>
+  </section>
+
+  <section class="dash-panel" id="panel-activity" hidden>
+    <div class="panel">
+      <h3>Recent activity</h3>
+      <p class="panel-sub">Sign-ins and account changes on your profile.</p>
+      <ul id="log-list" class="feed-list"></ul>
+      <p id="log-empty" class="empty" hidden>No activity yet.</p>
+    </div>
+  </section>
+
+  <section class="dash-panel" id="panel-settings" hidden>
+    <div class="danger-panel">
+      <div>
+        <h3>Delete account</h3>
+        <p>Removes your profile and cancels any pending bookings. This can't be undone.</p>
+      </div>
+      <button id="delete-account" class="danger" type="button">Delete my account</button>
+    </div>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
