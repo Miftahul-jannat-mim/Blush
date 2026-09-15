@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sign in — The Blush Makeover</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="auth-page">
+  <div class="auth-card">
+    <span class="logo"><span class="mark"></span>The Blush Makeover</span>
+
+    <div class="card-head">
+      <h2>Book your look</h2>
+      <p class="sub">Sign in to manage your booking, or create an account to reserve a date.</p>
+    </div>
+
+    <div class="tabs" role="tablist">
+      <button class="tab active" id="tab-signup" type="button" role="tab" aria-selected="true">Create account</button>
+      <button class="tab" id="tab-login" type="button" role="tab" aria-selected="false">Sign in</button>
+    </div>
+
+    <form id="signup-form" class="auth-form" novalidate>
+      <label for="signup-username">Your name</label>
+      <input id="signup-username" name="username" type="text" autocomplete="username" required />
+
+      <label for="signup-password">Password</label>
+      <div class="password-field">
+        <input id="signup-password" name="password" type="password" autocomplete="new-password" required minlength="6" />
+        <button type="button" class="toggle-visibility" data-target="signup-password" aria-label="Show password">
+          <svg class="icon-eye" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          <svg class="icon-eye-off" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" hidden><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="2" y1="22" x2="22" y2="2" stroke="currentColor" stroke-width="1.6"/></svg>
+        </button>
+      </div>
+      <p class="hint">At least 6 characters.</p>
+      <button type="submit" class="primary">Create account</button>
+    </form>
+
+    <form id="login-form" class="auth-form" novalidate hidden>
+      <label for="login-username">Your name</label>
+      <input id="login-username" name="username" type="text" autocomplete="username" required />
+
+      <label for="login-password">Password</label>
+      <div class="password-field">
+        <input id="login-password" name="password" type="password" autocomplete="current-password" required />
+        <button type="button" class="toggle-visibility" data-target="login-password" aria-label="Show password">
+          <svg class="icon-eye" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          <svg class="icon-eye-off" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" hidden><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="2" y1="22" x2="22" y2="2" stroke="currentColor" stroke-width="1.6"/></svg>
+        </button>
+      </div>
+      <button type="submit" class="primary">Sign in</button>
+    </form>
+
+    <p id="message" class="message" aria-live="polite"></p>
+
+    <div class="card-foot">
+      <a href="index.html">← Back to homepage</a>
+    </div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
