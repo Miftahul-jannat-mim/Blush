@@ -15,7 +15,7 @@ booking, and every login attempt — including the failed ones.
 ## 2. Where's the backend?
 
 Right here: `admin.html`, plus the `localStorage` box it reads from.
-That combination **is** my backend. If my teacher asks "where's the
+That combination **is** my backend. If ANYONE asks "where's the
 backend," that's the direct answer.
 
 - My **frontend** is what a visitor sees and clicks: the homepage,
